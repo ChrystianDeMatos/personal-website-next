@@ -57,7 +57,7 @@ export default function Footer() {
               </Typography>
               <Typography variant='body2'>
                 <a
-                  href='https://github.com/CristianDrift/personal-website'
+                  href='https://github.com/CristianDrift/personal-website-next'
                   rel='noopener noreferrer'
                   target='_blank'
                 >
