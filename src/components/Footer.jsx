@@ -62,7 +62,7 @@ export default function Footer() {
                   target='_blank'
                 >
                   Website Code
-            </a>
+                </a>
               </Typography>
             </Container>
           </Grid>

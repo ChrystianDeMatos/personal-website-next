@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
 
     '& div': { // for fix image component of next
-      overflow: 'visible !important', 
+      overflow: 'visible !important',
     }
   },
   profileText: {
@@ -63,13 +63,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Home() {
+export default function Home({ projects }) {
   const classes = useStyles();
   return (
     <React.Fragment>
       <SEO siteTitle="Home" />
       <Box className={classes.profileComponent}>
-        
+
         <Image
           className={classes.profilePictureImage}
           src="/profilePicture.png"
@@ -119,9 +119,20 @@ export default function Home() {
 
       <Typography className={classes.portfolioTitle} id="portfolio" variant="h5" component="h5">Portfólio</Typography>
 
-      <Portfolio />
+      <Portfolio projects={projects}/>
 
     </React.Fragment>
 
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch('/api/portfolio')
+  const projects = await res.json()
+
+  return {
+    props: {
+      projects,
+    },
+  }
 }

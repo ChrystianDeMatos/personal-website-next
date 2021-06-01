@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react'
 import PortfolioCard from './PortfolioCard'
 import { Grid } from '@material-ui/core';
 
-export default function Portfolio() {
+export default function Portfolio({ projects }) {
 
-  const [projects, setProjects] = useState([])
+  // const [projects, setProjects] = useState([])
 
-  useEffect(() => {
-    async function fetchData() {
-      fetch('/api/portfolio')
-        .then(async (response) => {
-          const resp = await response.json()
-          console.log(resp)
-          setProjects(resp)
-        })
-    }
-    fetchData()
-  }, [])
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     fetch('/api/portfolio')
+  //       .then(async (response) => {
+  //         const resp = await response.json()
+  //         console.log(resp)
+  //         setProjects(resp)
+  //       })
+  //   }
+  //   fetchData()
+  // }, [])
 
   // <Grid container spacing={2} >
   return (
