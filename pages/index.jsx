@@ -127,7 +127,7 @@ export default function Home({ projects }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('/api/portfolio')
+  const res = await fetch('https://chrystian.vercel.app/api/portfolio')
   const projects = await res.json()
 
   return {
