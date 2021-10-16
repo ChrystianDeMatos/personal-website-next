@@ -12,27 +12,28 @@ import Icon from './Icon'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display:'flex',
+    display: 'flex',
     flexDirection: 'column',
     minWidth: '100%'
-},
+  },
   title: {
-  fontSize: 14,
-},
+    fontSize: 14,
+  },
   pos: {
-  marginBottom: 12,
-},
+    marginBottom: 12,
+  },
   media: {
-  height: 0,
-  paddingTop: '56.25%', // 16:9
-},
+    position: 'relative',
+    height: 0,
+    paddingTop: '56.25%', // 16:9
+  },
   iconsPaper: {
-  backgroundColor: '#fff'
-},
+    backgroundColor: '#fff'
+  },
   cardActions: {
-  marginTop: 'auto'
-}
-  
+    marginTop: 'auto'
+  }
+
 }));
 
 const myLoader = ({ src, width, quality }) => {
@@ -43,17 +44,15 @@ export default function PortfolioCard({ title, description, technologies, image,
   const classes = useStyles()
   return (
     <Card className={classes.root}>
-      <Image
-        loader={myLoader}
-        src={image}
-        width={500}
-        height={285}
-      />
-      {/* <CardMedia
-        className={classes.media}
-        image={image}
-        title={title}
-      /> */}
+      <div className={classes.media}>
+        <Image
+          loader={myLoader}
+          src={image}
+          layout='fill'
+          title={title}
+        />
+      </div>
+
       <CardContent>
         <Typography variant="h5" component="h2">
           {title}
