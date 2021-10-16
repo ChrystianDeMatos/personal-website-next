@@ -48,8 +48,9 @@ export default function PortfolioCard({ title, description, technologies, image,
         <Image
           loader={myLoader}
           src={image}
-          layout='fill'
           title={title}
+          layout='fill'
+          objectFit='cover'
         />
       </div>
 
