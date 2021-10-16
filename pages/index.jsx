@@ -76,7 +76,7 @@ export default function Home({ projects }) {
           alt='Foto de perfil'
           width={200}
           height={200}
-          loading='eager'
+          quality={100}
           priority={true}
           id="about"
         />
@@ -94,8 +94,8 @@ export default function Home({ projects }) {
           <Grid item>
             <SocialIcon
               iconComponent={<GitHub className={classes.socialIcon} fontSize="large" />}
-              link='https://github.com/CristianDrift'
-              tooltip='CristianDrift'
+              link='https://github.com/chrystiandematos'
+              tooltip='ChrystianDeMatos'
             />
           </Grid>
           <Grid item>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -34,25 +35,29 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
+const myLoader = ({ src, width, quality }) => {
+  return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`
+}
+
 export default function PortfolioCard({ title, description, technologies, image, link }) {
   const classes = useStyles()
   return (
     <Card className={classes.root}>
-      <CardMedia
+      <Image
+        loader={myLoader}
+        src={image}
+        width={500}
+        height={285}
+      />
+      {/* <CardMedia
         className={classes.media}
         image={image}
         title={title}
-      />
+      /> */}
       <CardContent>
-        {/* <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography> */}
         <Typography variant="h5" component="h2">
           {title}
         </Typography>
-        {/* <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography> */}
         <Typography variant="body2" component="p">
           {description}
         </Typography>

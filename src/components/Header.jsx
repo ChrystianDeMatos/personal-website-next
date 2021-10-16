@@ -31,7 +31,6 @@ export default function Header() {
           <a className={classes.title}>
             <Typography variant="h6">
               {window.matchMedia("all and (max-width: 767px)").matches ? 'Chrystian M.' : 'Chrystian de Matos'}
-              {/* Chrystian de Matos */}
             </Typography>
           </a>
         </Link>
@@ -43,14 +42,6 @@ export default function Header() {
         <ScrollLink to='portfolio' smooth={true} offset={-80}>
           <Button className={classes.menuButton} edge="end">Portfólio</Button>
         </ScrollLink>
-
-        {/* <Link href="/sobre">
-          <Button className={classes.menuButton}>Sobre</Button>
-        </Link>
-
-        <Link href="/portfolio">
-          <Button className={classes.menuButton} edge="end">Portfólio</Button>
-        </Link> */}
       </Toolbar>
     </AppBar>
   )
