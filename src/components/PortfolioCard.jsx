@@ -36,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const myLoader = ({ src, width, quality }) => {
-  return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`
-}
+// const myLoader = ({ src, width, quality }) => {
+//   return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`
+// }
 
 export default function PortfolioCard({ title, description, technologies, image, link }) {
   const classes = useStyles()
@@ -46,7 +46,7 @@ export default function PortfolioCard({ title, description, technologies, image,
     <Card className={classes.root}>
       <div className={classes.media}>
         <Image
-          loader={myLoader}
+          // loader={myLoader}
           src={image}
           title={title}
           layout='fill'

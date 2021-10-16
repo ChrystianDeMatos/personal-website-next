@@ -11,7 +11,7 @@ const projects = [
             newTech("unity", "Unity"),
             newTech("csharp", "CSharp")
         ],
-        image: "neonjanitor.png",
+        image: "/neonjanitor.png",
         link: "https://chrystiandematos.itch.io/neon-janitor-88"
     },
     {
@@ -21,7 +21,7 @@ const projects = [
             newTech("unity", "Unity"),
             newTech("csharp", "CSharp")
         ],
-        image: "outofcontrol.gif",
+        image: "/outofcontrol.gif",
         link: "https://chrystiandematos.itch.io/out-of-control"
     },
     {
@@ -31,7 +31,7 @@ const projects = [
             newTech("unity", "Unity"),
             newTech("csharp", "CSharp")
         ],
-        image: "spaceroguelite.png",
+        image: "/spaceroguelite.png",
         link: ""
     },
     {
@@ -41,7 +41,7 @@ const projects = [
             newTech("nodejs", "NodeJS"),
             newTech("postgresql", "PostgreSQL"),
         ],
-        image: "msgcounter.png",
+        image: "/msgcounter.png",
         link: "https://github.com/CristianDrift/MSG-Counter-Bot"
     },
     {
@@ -51,7 +51,7 @@ const projects = [
             newTech("csharp", "CSharp"),
             newTech("dotnet", ".NET"),
         ],
-        image: "driveuploader.png",
+        image: "/driveuploader.png",
         link: ""
     },
     {
@@ -63,7 +63,7 @@ const projects = [
             newTech("react", "React"),
             newTech("mongodb", "MongoDB"),
         ],
-        image: "fabiomatos.png",
+        image: "/fabiomatos.png",
         link: "https://www.figma.com/proto/UWAVndRo9zpmYwM23WMLsP/Fabio-Matos-Projeto?node-id=2%3A1&scaling=min-zoom"
     },
     {
@@ -72,7 +72,7 @@ const projects = [
         technologies: [
             newTech("react", "React"),
         ],
-        image: "kaiju.png",
+        image: "/kaiju.png",
         link: "https://kaiju-rpg.vercel.app"
     },
 ]
