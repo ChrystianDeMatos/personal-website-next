@@ -23,15 +23,17 @@ function App({ Component, pageProps }) {
   }
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <SEO />
-      <CssBaseline />
-      <Header />
-      <Container>
-        <Component {...pageProps} />
-      </Container>
-      <Footer />
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Header />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
+        <Footer />
+      </ThemeProvider>
+    </>
   );
 }
 
