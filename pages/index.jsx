@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Home({ projects }) {
+function Home({ projects }) {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -136,3 +136,5 @@ export async function getStaticProps() {
     },
   }
 }
+
+export default Home

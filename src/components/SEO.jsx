@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function SEO({
+function SEO({
   title = 'Chrystian',
   siteTitle = 'Undefined',
   description = 'Programador e desenvolvedor de jogos, apaixonado por tecnologia, atualmente fazendo projetos de programação em grupos e individuais. Buscando experiência na área, visto que meu sonho é trabalhar na indústria do desenvolvimento de software.',
@@ -32,3 +32,5 @@ export default function SEO({
     </Head>
   )
 }
+
+export default SEO
