@@ -12,16 +12,6 @@ import Footer from '../src/components/Footer';
 import SEO from '../src/components/SEO';
 
 function App({ Component, pageProps }) {
-  // const [isMounted, setIsMounted] = useState(false)
-
-  // useEffect(() => {
-  //   setIsMounted(true)
-  // }, [])
-
-  // if (!isMounted) {
-  //   return null
-  // }
-
   return (
     <>
       <SEO />

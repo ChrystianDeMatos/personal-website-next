@@ -21,16 +21,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const SSR = typeof window === 'undefined'
+
 export default function Header() {
   const classes = useStyles();
 
   return (
+    <>
     <AppBar position="fixed">
       <Toolbar className={classes.root}>
         <Link href="/" passHref>
           <a className={classes.title}>
             <Typography variant="h6">
-              {window.matchMedia("all and (max-width: 767px)").matches ? 'Chrystian M.' : 'Chrystian de Matos'}
+              {!SSR ?? window.matchMedia("all and (max-width: 767px)").matches ? 'Chrystian M.' : 'Chrystian de Matos'}
             </Typography>
           </a>
         </Link>
@@ -44,5 +47,7 @@ export default function Header() {
         </ScrollLink>
       </Toolbar>
     </AppBar>
+    </>
+    
   )
 }
